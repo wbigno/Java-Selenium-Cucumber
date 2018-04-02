@@ -103,7 +103,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
 
     }
 
@@ -116,7 +116,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 
     @Then("^I will compare the temp for day three to assure its within the desired range of twenty degrees between the min and max temp$")
@@ -128,7 +128,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 
     @Then("^I will compare the temp for day four to assure its within the desired range of twenty degrees between the min and max temp$")
@@ -140,7 +140,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 
     @Then("^I will compare the temp for day five to assure its within the desired range of twenty degrees between the min and max temp$")
@@ -152,7 +152,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 
     @Then("^I will compare the temp for day six to assure its within the desired range of twenty degrees between the min and max temp$")
@@ -164,7 +164,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 
     @Then("^I will compare the temp for day seven to assure its within the desired range of twenty degrees between the min and max temp$")
@@ -176,7 +176,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 
     @Then("^I will compare the temp for day eight to assure its within the desired range of twenty degrees between the min and max temp$")
@@ -188,7 +188,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 
     @Then("^I will compare the temp for day nine to assure its within the desired range of twenty degrees between the min and max temp$")
@@ -200,7 +200,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 
     @Then("^I will compare the temp for day ten to assure its within the desired range of twenty degrees between the min and max temp$")
@@ -212,7 +212,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 
     @Then("^I will compare the temp for day eleven to assure its within the desired range of twenty degrees between the min and max temp$")
@@ -224,7 +224,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 
     @Then("^I will compare the temp for day twelve to assure its within the desired range of twenty degrees between the min and max temp$")
@@ -236,7 +236,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 
     @Then("^I will compare the temp for day thirteen to assure its within the desired range of twenty degrees between the min and max temp$")
@@ -248,7 +248,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 
     @Then("^I will compare the temp for day fourteen to assure its within the desired range of twenty degrees between the min and max temp$")
@@ -260,7 +260,7 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 
     @Then("^I will compare the temp for day fifteen to assure its within the desired range of twenty degrees between the min and max temp$")
@@ -272,6 +272,6 @@ public class StepDefs10DayForecast {
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);
         int var = max - min;
-        assertThat(var,lessThanOrEqualTo(20));
+        assertThat(var,lessThanOrEqualTo(10));
     }
 }

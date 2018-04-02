@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 4242532545,
+  "duration": 4020465998,
   "status": "passed"
 });
 formatter.background({
@@ -26,16 +26,22 @@ formatter.match({
   "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
 });
 formatter.result({
-  "duration": 1548066004,
+  "duration": 841016731,
   "status": "passed"
 });
 formatter.scenario({
   "line": 7,
-  "name": "For the current day",
+  "name": "For the current day, verify temp is within 20 degrees of the min and max temps",
   "description": "",
-  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-the-current-day",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-the-current-day,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 6,
+      "name": "@next7"
+    }
+  ]
 });
 formatter.step({
   "line": 8,
@@ -56,32 +62,32 @@ formatter.match({
   "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
 });
 formatter.result({
-  "duration": 11157308903,
+  "duration": 10336543141,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
 });
 formatter.result({
-  "duration": 2070032528,
+  "duration": 2036699688,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillCompareTheTempForTheCurrentDayToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
 });
 formatter.result({
-  "duration": 577351305,
-  "error_message": "java.lang.NumberFormatException: For input string: \"--34\"\n\tat java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.lang.Integer.parseInt(Integer.java:580)\n\tat java.lang.Integer.parseInt(Integer.java:615)\n\tat StepFiles.StepDefs10DayForecast.iWillCompareTheTempForTheCurrentDayToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(StepDefs10DayForecast.java:102)\n\tat ✽.Then I will compare the temp for the current day to assure its within the desired range of twenty degrees between the min and max temp(10DayForecast.feature:10)\n",
+  "duration": 117518574,
+  "error_message": "java.lang.NumberFormatException: For input string: \"--34\"\n\tat java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)\n\tat java.lang.Integer.parseInt(Integer.java:580)\n\tat java.lang.Integer.parseInt(Integer.java:615)\n\tat StepFiles.StepDefs10DayForecast.iWillCompareTheTempForTheCurrentDayToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(StepDefs10DayForecast.java:103)\n\tat ✽.Then I will compare the temp for the current day to assure its within the desired range of twenty degrees between the min and max temp(10DayForecast.feature:10)\n",
   "status": "failed"
 });
 formatter.embedding("image/png", "embedded0.png");
-formatter.write("For the current day");
+formatter.write("For the current day, verify temp is within 20 degrees of the min and max temps");
 formatter.after({
-  "duration": 6667152492,
+  "duration": 5915901433,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3009661932,
+  "duration": 3375389556,
   "status": "passed"
 });
 formatter.background({
@@ -100,16 +106,22 @@ formatter.match({
   "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
 });
 formatter.result({
-  "duration": 197505748,
+  "duration": 708056979,
   "status": "passed"
 });
 formatter.scenario({
   "line": 12,
-  "name": "For day 2",
+  "name": "For day 2, verify temp is within 20 degrees of the min and max temps",
   "description": "",
-  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-2",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-2,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 11,
+      "name": "@next7"
+    }
+  ]
 });
 formatter.step({
   "line": 13,
@@ -130,29 +142,29 @@ formatter.match({
   "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
 });
 formatter.result({
-  "duration": 11690063719,
+  "duration": 9970073972,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
 });
 formatter.result({
-  "duration": 2132005966,
+  "duration": 2028260938,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillCompareTheTempForDayTwoToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
 });
 formatter.result({
-  "duration": 182140034,
+  "duration": 3865182334,
   "status": "passed"
 });
 formatter.after({
-  "duration": 5211984791,
+  "duration": 5249493577,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3212627993,
+  "duration": 6095290479,
   "status": "passed"
 });
 formatter.background({
@@ -171,16 +183,22 @@ formatter.match({
   "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
 });
 formatter.result({
-  "duration": 636338292,
+  "duration": 138176011,
   "status": "passed"
 });
 formatter.scenario({
   "line": 17,
-  "name": "For day 3",
+  "name": "For day 3, verify temp is within 20 degrees of the min and max temps",
   "description": "",
-  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-3",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-3,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 16,
+      "name": "@next7"
+    }
+  ]
 });
 formatter.step({
   "line": 18,
@@ -201,30 +219,29 @@ formatter.match({
   "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
 });
 formatter.result({
-  "duration": 20240917080,
-  "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id\u003d\u0027APP\u0027]/div/div[6]/div[2]/div/div/div[1]/div[1]/div/div[3] (tried for 20 second(s) with 500 MILLISECONDS interval)\nBuild info: version: \u00273.4.0\u0027, revision: \u0027unknown\u0027, time: \u0027unknown\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:c37:971f:e1e9:c242%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.13.3\u0027, java.version: \u00271.8.0_131\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{applicationCacheEnabled\u003dfalse, rotatable\u003dfalse, mobileEmulationEnabled\u003dfalse, networkConnectionEnabled\u003dfalse, chrome\u003d{chromedriverVersion\u003d2.37.544337 (8c0344a12e552148c185f7d5117db1f28d6c9e85), userDataDir\u003d/var/folders/3s/skfr_gh54pg6_7ymsj2g39gr0000gn/T/.org.chromium.Chromium.cby2Ai}, takesHeapSnapshot\u003dtrue, pageLoadStrategy\u003dnormal, databaseEnabled\u003dfalse, handlesAlerts\u003dtrue, hasTouchScreen\u003dfalse, version\u003d65.0.3325.181, platform\u003dMAC, browserConnectionEnabled\u003dfalse, nativeEvents\u003dtrue, acceptSslCerts\u003dfalse, acceptInsecureCerts\u003dfalse, locationContextEnabled\u003dtrue, webStorageEnabled\u003dtrue, browserName\u003dchrome, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue, setWindowRect\u003dtrue, unexpectedAlertBehaviour\u003d}]\nSession ID: c308362e6f69aeff99747479e1af0503\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)\n\tat StepFiles.StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast(StepDefs10DayForecast.java:67)\n\tat ✽.When I am on the main page I will click on the ten day forecast(10DayForecast.feature:18)\n",
-  "status": "failed"
+  "duration": 12549755432,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 2042655219,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillCompareTheTempForDayThreeToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 2024485864,
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded1.png");
-formatter.write("For day 3");
 formatter.after({
-  "duration": 6716316442,
+  "duration": 5391744040,
   "status": "passed"
 });
 formatter.before({
-  "duration": 2964947170,
+  "duration": 3188721850,
   "status": "passed"
 });
 formatter.background({
@@ -243,16 +260,22 @@ formatter.match({
   "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
 });
 formatter.result({
-  "duration": 159529726,
+  "duration": 179061190,
   "status": "passed"
 });
 formatter.scenario({
   "line": 22,
-  "name": "For day 4",
+  "name": "For day 4, verify temp is within 20 degrees of the min and max temps",
   "description": "",
-  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-4",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-4,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 21,
+      "name": "@next7"
+    }
+  ]
 });
 formatter.step({
   "line": 23,
@@ -273,32 +296,32 @@ formatter.match({
   "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
 });
 formatter.result({
-  "duration": 9912470411,
+  "duration": 11440081227,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
 });
 formatter.result({
-  "duration": 2371643706,
+  "duration": 2757486880,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillCompareTheTempForDayFourToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
 });
 formatter.result({
-  "duration": 398218424,
-  "error_message": "java.lang.AssertionError: \nExpected: a value less than or equal to \u003c20\u003e\n     but: \u003c31\u003e was greater than \u003c20\u003e\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)\n\tat StepFiles.StepDefs10DayForecast.iWillCompareTheTempForDayFourToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(StepDefs10DayForecast.java:142)\n\tat ✽.Then I will compare the temp for day four to assure its within the desired range of twenty degrees between the min and max temp(10DayForecast.feature:25)\n",
+  "duration": 283259618,
+  "error_message": "java.lang.AssertionError: \nExpected: a value less than or equal to \u003c20\u003e\n     but: \u003c31\u003e was greater than \u003c20\u003e\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)\n\tat StepFiles.StepDefs10DayForecast.iWillCompareTheTempForDayFourToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(StepDefs10DayForecast.java:143)\n\tat ✽.Then I will compare the temp for day four to assure its within the desired range of twenty degrees between the min and max temp(10DayForecast.feature:25)\n",
   "status": "failed"
 });
-formatter.embedding("image/png", "embedded2.png");
-formatter.write("For day 4");
+formatter.embedding("image/png", "embedded1.png");
+formatter.write("For day 4, verify temp is within 20 degrees of the min and max temps");
 formatter.after({
-  "duration": 5956776926,
+  "duration": 6124158582,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3166947159,
+  "duration": 3076160900,
   "status": "passed"
 });
 formatter.background({
@@ -317,16 +340,22 @@ formatter.match({
   "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
 });
 formatter.result({
-  "duration": 684813748,
+  "duration": 188110164,
   "status": "passed"
 });
 formatter.scenario({
   "line": 27,
-  "name": "For day 5",
+  "name": "For day 5, verify temp is within 20 degrees of the min and max temps",
   "description": "",
-  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-5",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-5,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 26,
+      "name": "@next7"
+    }
+  ]
 });
 formatter.step({
   "line": 28,
@@ -347,29 +376,29 @@ formatter.match({
   "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
 });
 formatter.result({
-  "duration": 15530520936,
+  "duration": 10941017307,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
 });
 formatter.result({
-  "duration": 2267434002,
+  "duration": 2350579481,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillCompareTheTempForDayFiveToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
 });
 formatter.result({
-  "duration": 555420375,
+  "duration": 702857610,
   "status": "passed"
 });
 formatter.after({
-  "duration": 5181024245,
+  "duration": 5163942950,
   "status": "passed"
 });
 formatter.before({
-  "duration": 2806820309,
+  "duration": 3238559025,
   "status": "passed"
 });
 formatter.background({
@@ -388,16 +417,22 @@ formatter.match({
   "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
 });
 formatter.result({
-  "duration": 192097005,
+  "duration": 729656433,
   "status": "passed"
 });
 formatter.scenario({
   "line": 32,
-  "name": "For day 6",
+  "name": "For day 6, verify temp is within 20 degrees of the min and max temps",
   "description": "",
-  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-6",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-6,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 31,
+      "name": "@next7"
+    }
+  ]
 });
 formatter.step({
   "line": 33,
@@ -418,29 +453,29 @@ formatter.match({
   "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
 });
 formatter.result({
-  "duration": 9762567152,
+  "duration": 14880717706,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
 });
 formatter.result({
-  "duration": 2461214313,
+  "duration": 2031872713,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillCompareTheTempForDayToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
 });
 formatter.result({
-  "duration": 156465024,
+  "duration": 226691403,
   "status": "passed"
 });
 formatter.after({
-  "duration": 5448854688,
+  "duration": 5193816782,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3014431418,
+  "duration": 3059897895,
   "status": "passed"
 });
 formatter.background({
@@ -459,16 +494,22 @@ formatter.match({
   "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
 });
 formatter.result({
-  "duration": 282931225,
+  "duration": 240037074,
   "status": "passed"
 });
 formatter.scenario({
   "line": 37,
-  "name": "For day 7",
+  "name": "For day 7, verify temp is within 20 degrees of the min and max temps",
   "description": "",
-  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-7",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-7,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 36,
+      "name": "@next7"
+    }
+  ]
 });
 formatter.step({
   "line": 38,
@@ -489,29 +530,29 @@ formatter.match({
   "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
 });
 formatter.result({
-  "duration": 10029549283,
+  "duration": 10658433352,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
 });
 formatter.result({
-  "duration": 2304715526,
+  "duration": 2670158096,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillCompareTheTempForDaySevenToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
 });
 formatter.result({
-  "duration": 255874332,
+  "duration": 419251526,
   "status": "passed"
 });
 formatter.after({
-  "duration": 5157810442,
+  "duration": 5227733649,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3204520720,
+  "duration": 3405185089,
   "status": "passed"
 });
 formatter.background({
@@ -530,14 +571,14 @@ formatter.match({
   "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
 });
 formatter.result({
-  "duration": 98390113,
+  "duration": 302253309,
   "status": "passed"
 });
 formatter.scenario({
   "line": 42,
-  "name": "For day 8",
+  "name": "For day 8, verify temp is within 20 degrees of the min and max temps",
   "description": "",
-  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-8",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-8,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
   "type": "scenario",
   "keyword": "Scenario"
 });
@@ -560,30 +601,29 @@ formatter.match({
   "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
 });
 formatter.result({
-  "duration": 20145467027,
-  "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id\u003d\u0027APP\u0027]/div/div[6]/div[2]/div/div/div[1]/div[1]/div/div[3] (tried for 20 second(s) with 500 MILLISECONDS interval)\nBuild info: version: \u00273.4.0\u0027, revision: \u0027unknown\u0027, time: \u0027unknown\u0027\nSystem info: host: \u0027Williams-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:c37:971f:e1e9:c242%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.13.3\u0027, java.version: \u00271.8.0_131\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{applicationCacheEnabled\u003dfalse, rotatable\u003dfalse, mobileEmulationEnabled\u003dfalse, networkConnectionEnabled\u003dfalse, chrome\u003d{chromedriverVersion\u003d2.37.544337 (8c0344a12e552148c185f7d5117db1f28d6c9e85), userDataDir\u003d/var/folders/3s/skfr_gh54pg6_7ymsj2g39gr0000gn/T/.org.chromium.Chromium.8CLDXE}, takesHeapSnapshot\u003dtrue, pageLoadStrategy\u003dnormal, databaseEnabled\u003dfalse, handlesAlerts\u003dtrue, hasTouchScreen\u003dfalse, version\u003d65.0.3325.181, platform\u003dMAC, browserConnectionEnabled\u003dfalse, nativeEvents\u003dtrue, acceptSslCerts\u003dfalse, acceptInsecureCerts\u003dfalse, locationContextEnabled\u003dtrue, webStorageEnabled\u003dtrue, browserName\u003dchrome, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue, setWindowRect\u003dtrue, unexpectedAlertBehaviour\u003d}]\nSession ID: e378075c5dd1d25bff5d579bb5ff5f1a\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)\n\tat StepFiles.StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast(StepDefs10DayForecast.java:67)\n\tat ✽.When I am on the main page I will click on the ten day forecast(10DayForecast.feature:43)\n",
-  "status": "failed"
+  "duration": 10805160062,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 2331199651,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillCompareTheTempForDayEightToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 180926391,
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded3.png");
-formatter.write("For day 8");
 formatter.after({
-  "duration": 6824669796,
+  "duration": 5163257928,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3360438284,
+  "duration": 3408978681,
   "status": "passed"
 });
 formatter.background({
@@ -602,14 +642,14 @@ formatter.match({
   "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
 });
 formatter.result({
-  "duration": 479031226,
+  "duration": 580107810,
   "status": "passed"
 });
 formatter.scenario({
   "line": 47,
-  "name": "For day 9",
+  "name": "For day 9, verify temp is within 20 degrees of the min and max temps",
   "description": "",
-  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-9",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-9,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
   "type": "scenario",
   "keyword": "Scenario"
 });
@@ -632,29 +672,29 @@ formatter.match({
   "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
 });
 formatter.result({
-  "duration": 10574700946,
+  "duration": 15841427286,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
 });
 formatter.result({
-  "duration": 2639653159,
+  "duration": 2096601495,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillCompareTheTempForDayNineToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
 });
 formatter.result({
-  "duration": 293419569,
+  "duration": 205849257,
   "status": "passed"
 });
 formatter.after({
-  "duration": 5187855034,
+  "duration": 5247618211,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3333216928,
+  "duration": 2966359001,
   "status": "passed"
 });
 formatter.background({
@@ -673,14 +713,14 @@ formatter.match({
   "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
 });
 formatter.result({
-  "duration": 81380561,
+  "duration": 106541935,
   "status": "passed"
 });
 formatter.scenario({
   "line": 52,
-  "name": "For day 10",
+  "name": "For day 10, verify temp is within 20 degrees of the min and max temps",
   "description": "",
-  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-10",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-10,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
   "type": "scenario",
   "keyword": "Scenario"
 });
@@ -703,25 +743,380 @@ formatter.match({
   "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
 });
 formatter.result({
-  "duration": 10057772026,
+  "duration": 11090738676,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
 });
 formatter.result({
-  "duration": 2316767240,
+  "duration": 2596512096,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefs10DayForecast.iWillCompareTheTempForDayTenToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
 });
 formatter.result({
-  "duration": 576176414,
+  "duration": 607713538,
   "status": "passed"
 });
 formatter.after({
-  "duration": 5262882373,
+  "duration": 5320393154,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3044801892,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "Chrome browser launches, and I land on the weatherdotcom main page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
+});
+formatter.result({
+  "duration": 147577159,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 57,
+  "name": "For day 11, verify temp is within 20 degrees of the min and max temps",
+  "description": "",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-11,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 58,
+  "name": "I am on the main page I will click on the ten day forecast",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 59,
+  "name": "I will confirm I land on the ten day forecast for the local area",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 60,
+  "name": "I will compare the temp for day eleven to assure its within the desired range of twenty degrees between the min and max temp",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
+});
+formatter.result({
+  "duration": 9838098718,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
+});
+formatter.result({
+  "duration": 3039081258,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iWillCompareTheTempForDayElevenToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
+});
+formatter.result({
+  "duration": 652796747,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 5782683759,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3396796624,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "Chrome browser launches, and I land on the weatherdotcom main page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
+});
+formatter.result({
+  "duration": 187456506,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 62,
+  "name": "For day 12, verify temp is within 20 degrees of the min and max temps",
+  "description": "",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-12,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 63,
+  "name": "I am on the main page I will click on the ten day forecast",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 64,
+  "name": "I will confirm I land on the ten day forecast for the local area",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 65,
+  "name": "I will compare the temp for day twelve to assure its within the desired range of twenty degrees between the min and max temp",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
+});
+formatter.result({
+  "duration": 10211814673,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
+});
+formatter.result({
+  "duration": 3151778000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iWillCompareTheTempForDayTwelveToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
+});
+formatter.result({
+  "duration": 481714922,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 5239710099,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3384517252,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "Chrome browser launches, and I land on the weatherdotcom main page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
+});
+formatter.result({
+  "duration": 107577876,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 67,
+  "name": "For day 13, verify temp is within 20 degrees of the min and max temps",
+  "description": "",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-13,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 68,
+  "name": "I am on the main page I will click on the ten day forecast",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 69,
+  "name": "I will confirm I land on the ten day forecast for the local area",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 70,
+  "name": "I will compare the temp for day thirteen to assure its within the desired range of twenty degrees between the min and max temp",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
+});
+formatter.result({
+  "duration": 9427713256,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
+});
+formatter.result({
+  "duration": 2072461204,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iWillCompareTheTempForDayThirteenToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
+});
+formatter.result({
+  "duration": 411547834,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 5314482066,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3089968653,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "Chrome browser launches, and I land on the weatherdotcom main page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
+});
+formatter.result({
+  "duration": 226092596,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 72,
+  "name": "For day 14, verify temp is within 20 degrees of the min and max temps",
+  "description": "",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-14,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 73,
+  "name": "I am on the main page I will click on the ten day forecast",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 74,
+  "name": "I will confirm I land on the ten day forecast for the local area",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 75,
+  "name": "I will compare the temp for day fourteen to assure its within the desired range of twenty degrees between the min and max temp",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
+});
+formatter.result({
+  "duration": 10929486415,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
+});
+formatter.result({
+  "duration": 2221043519,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iWillCompareTheTempForDayFourteenToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
+});
+formatter.result({
+  "duration": 217152267,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 5343770441,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3193528395,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "Chrome browser launches, and I land on the weatherdotcom main page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage()"
+});
+formatter.result({
+  "duration": 795986653,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 77,
+  "name": "For day 15, verify temp is within 20 degrees of the min and max temps",
+  "description": "",
+  "id": "using-weather.com-i-want-to-use-the-10-day-forecast-to-compare-the-daily-temp-variance;for-day-15,-verify-temp-is-within-20-degrees-of-the-min-and-max-temps",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 78,
+  "name": "I am on the main page I will click on the ten day forecast",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 79,
+  "name": "I will confirm I land on the ten day forecast for the local area",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 80,
+  "name": "I will compare the temp for day fifteen to assure its within the desired range of twenty degrees between the min and max temp",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast()"
+});
+formatter.result({
+  "duration": 12367445855,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iWillConfirmILandOnTheTenDayForecastForTheLocalArea()"
+});
+formatter.result({
+  "duration": 2027864054,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StepDefs10DayForecast.iWillCompareTheTempForDayFifteenToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp()"
+});
+formatter.result({
+  "duration": 4994832693,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 5225520091,
   "status": "passed"
 });
 });

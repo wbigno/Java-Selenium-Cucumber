@@ -1,5 +1,6 @@
 package StepFiles;
 
+import cucumber.api.PendingException;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -29,7 +30,7 @@ public class StepDefs10DayForecast {
         driverchrome = new ChromeDriver();
         driverchrome.get("https://weather.com");
         driverchrome.manage().window().maximize();
-        driverchrome.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driverchrome.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
     }
 
@@ -63,7 +64,7 @@ public class StepDefs10DayForecast {
 
     @When("^I am on the main page I will click on the ten day forecast$")
     public void iAmOnTheMainPageIWillClickOnTheTenDayForecast(){
-            WebElement elem = (new WebDriverWait(driverchrome, 20))
+            WebElement elem = (new WebDriverWait(driverchrome, 25))
                     .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='APP']/div/div[6]/div[2]/div/div/div[1]/div[1]/div/div[3]")));
             if (elem.isDisplayed()) {
             driverchrome.findElement(By.xpath("//*[@id='APP']/div/div[6]/div[2]/div/div/div[1]/div[1]/div/div[3]/div/div/button[1]")).click();
@@ -95,7 +96,7 @@ public class StepDefs10DayForecast {
 
     @Then("^I will compare the temp for the current day to assure its within the desired range of twenty degrees between the min and max temp$")
     public void iWillCompareTheTempForTheCurrentDayToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(){
-        WebElement table = (new WebDriverWait(driverchrome, 20))
+        WebElement table = (new WebDriverWait(driverchrome, 25))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
         String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(1) > td.temp")).getText();
         String temps [] = temp.split("\\u00b0");
@@ -108,7 +109,7 @@ public class StepDefs10DayForecast {
 
     @Then("^I will compare the temp for day two to assure its within the desired range of twenty degrees between the min and max temp$")
     public void iWillCompareTheTempForDayTwoToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(){
-        WebElement table = (new WebDriverWait(driverchrome, 20))
+        WebElement table = (new WebDriverWait(driverchrome, 25))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
         String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(2) > td.temp")).getText();
         String temps [] = temp.split("\\u00b0");
@@ -120,7 +121,7 @@ public class StepDefs10DayForecast {
 
     @Then("^I will compare the temp for day three to assure its within the desired range of twenty degrees between the min and max temp$")
     public void iWillCompareTheTempForDayThreeToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(){
-        WebElement table = (new WebDriverWait(driverchrome, 20))
+        WebElement table = (new WebDriverWait(driverchrome, 25))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
         String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(3) > td.temp")).getText();
         String temps [] = temp.split("\\u00b0");
@@ -132,7 +133,7 @@ public class StepDefs10DayForecast {
 
     @Then("^I will compare the temp for day four to assure its within the desired range of twenty degrees between the min and max temp$")
     public void iWillCompareTheTempForDayFourToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(){
-        WebElement table = (new WebDriverWait(driverchrome, 20))
+        WebElement table = (new WebDriverWait(driverchrome, 25))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
         String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(4) > td.temp")).getText();
         String temps [] = temp.split("\\u00b0");
@@ -144,7 +145,7 @@ public class StepDefs10DayForecast {
 
     @Then("^I will compare the temp for day five to assure its within the desired range of twenty degrees between the min and max temp$")
     public void iWillCompareTheTempForDayFiveToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(){
-        WebElement table = (new WebDriverWait(driverchrome, 20))
+        WebElement table = (new WebDriverWait(driverchrome, 25))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
         String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(5) > td.temp")).getText();
         String temps [] = temp.split("\\u00b0");
@@ -156,7 +157,7 @@ public class StepDefs10DayForecast {
 
     @Then("^I will compare the temp for day six to assure its within the desired range of twenty degrees between the min and max temp$")
     public void iWillCompareTheTempForDayToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp() {
-        WebElement table = (new WebDriverWait(driverchrome, 20))
+        WebElement table = (new WebDriverWait(driverchrome, 25))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
         String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(6) > td.temp")).getText();
         String temps [] = temp.split("\\u00b0");
@@ -168,7 +169,7 @@ public class StepDefs10DayForecast {
 
     @Then("^I will compare the temp for day seven to assure its within the desired range of twenty degrees between the min and max temp$")
     public void iWillCompareTheTempForDaySevenToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(){
-        WebElement table = (new WebDriverWait(driverchrome, 20))
+        WebElement table = (new WebDriverWait(driverchrome, 25))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
         String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(7) > td.temp")).getText();
         String temps [] = temp.split("\\u00b0");
@@ -180,7 +181,7 @@ public class StepDefs10DayForecast {
 
     @Then("^I will compare the temp for day eight to assure its within the desired range of twenty degrees between the min and max temp$")
     public void iWillCompareTheTempForDayEightToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(){
-        WebElement table = (new WebDriverWait(driverchrome, 20))
+        WebElement table = (new WebDriverWait(driverchrome, 25))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
         String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(8) > td.temp")).getText();
         String temps [] = temp.split("\\u00b0");
@@ -192,7 +193,7 @@ public class StepDefs10DayForecast {
 
     @Then("^I will compare the temp for day nine to assure its within the desired range of twenty degrees between the min and max temp$")
     public void iWillCompareTheTempForDayNineToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(){
-        WebElement table = (new WebDriverWait(driverchrome, 20))
+        WebElement table = (new WebDriverWait(driverchrome, 25))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
         String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(9) > td.temp")).getText();
         String temps [] = temp.split("\\u00b0");
@@ -204,9 +205,69 @@ public class StepDefs10DayForecast {
 
     @Then("^I will compare the temp for day ten to assure its within the desired range of twenty degrees between the min and max temp$")
     public void iWillCompareTheTempForDayTenToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(){
-        WebElement table = (new WebDriverWait(driverchrome, 20))
+        WebElement table = (new WebDriverWait(driverchrome, 25))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
         String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(10) > td.temp")).getText();
+        String temps [] = temp.split("\\u00b0");
+        int max = Integer.parseInt(temps[0]);
+        int min = Integer.parseInt(temps[1]);
+        int var = max - min;
+        assertThat(var,lessThanOrEqualTo(20));
+    }
+
+    @Then("^I will compare the temp for day eleven to assure its within the desired range of twenty degrees between the min and max temp$")
+    public void iWillCompareTheTempForDayElevenToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(){
+        WebElement table = (new WebDriverWait(driverchrome, 25))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
+        String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(11) > td.temp")).getText();
+        String temps [] = temp.split("\\u00b0");
+        int max = Integer.parseInt(temps[0]);
+        int min = Integer.parseInt(temps[1]);
+        int var = max - min;
+        assertThat(var,lessThanOrEqualTo(20));
+    }
+
+    @Then("^I will compare the temp for day twelve to assure its within the desired range of twenty degrees between the min and max temp$")
+    public void iWillCompareTheTempForDayTwelveToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp() {
+        WebElement table = (new WebDriverWait(driverchrome, 25))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
+        String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(12) > td.temp")).getText();
+        String temps [] = temp.split("\\u00b0");
+        int max = Integer.parseInt(temps[0]);
+        int min = Integer.parseInt(temps[1]);
+        int var = max - min;
+        assertThat(var,lessThanOrEqualTo(20));
+    }
+
+    @Then("^I will compare the temp for day thirteen to assure its within the desired range of twenty degrees between the min and max temp$")
+    public void iWillCompareTheTempForDayThirteenToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(){
+        WebElement table = (new WebDriverWait(driverchrome, 25))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
+        String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(13) > td.temp")).getText();
+        String temps [] = temp.split("\\u00b0");
+        int max = Integer.parseInt(temps[0]);
+        int min = Integer.parseInt(temps[1]);
+        int var = max - min;
+        assertThat(var,lessThanOrEqualTo(20));
+    }
+
+    @Then("^I will compare the temp for day fourteen to assure its within the desired range of twenty degrees between the min and max temp$")
+    public void iWillCompareTheTempForDayFourteenToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(){
+        WebElement table = (new WebDriverWait(driverchrome, 25))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
+        String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(14) > td.temp")).getText();
+        String temps [] = temp.split("\\u00b0");
+        int max = Integer.parseInt(temps[0]);
+        int min = Integer.parseInt(temps[1]);
+        int var = max - min;
+        assertThat(var,lessThanOrEqualTo(20));
+    }
+
+    @Then("^I will compare the temp for day fifteen to assure its within the desired range of twenty degrees between the min and max temp$")
+    public void iWillCompareTheTempForDayFifteenToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(){
+        WebElement table = (new WebDriverWait(driverchrome, 25))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
+        String temp = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(15) > td.temp")).getText();
         String temps [] = temp.split("\\u00b0");
         int max = Integer.parseInt(temps[0]);
         int min = Integer.parseInt(temps[1]);

@@ -31,7 +31,8 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -45,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Apr 1, 2018 10:01:35 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Apr 1, 2018 11:01:43 PM</span>
 				</a>
 			</li>
 			<li>
@@ -72,7 +73,6 @@
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -80,6 +80,16 @@
 			<!-- test toggle -->
 
 			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@next7</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
 			<!-- category toggle -->
 
 			<!-- clear filters -->
@@ -123,10 +133,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='80%'><span class='strong'>32</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='96.667%'><span class='strong'>58</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='10%'>4</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='10%'>4</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='3.333%'>2</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -138,10 +148,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='80%'><span class='strong'>32</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='96.667%'><span class='strong'>58</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='10%'>4</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='10%'>4</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='3.333%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -159,30 +169,30 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance</span>
-						<span class='test-time'>Apr 1, 2018 10:01:35 PM</span>
+						<span class='test-time'>Apr 1, 2018 11:01:43 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 1, 2018 10:01:35 PM</span>
-	<span class='label end-time'>Apr 1, 2018 10:05:35 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 4m 0s+1ms</span>
+	<span class='label start-time'>Apr 1, 2018 11:01:43 PM</span>
+	<span class='label end-time'>Apr 1, 2018 11:07:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 5m 55s+526ms</span>
 </div>
 	<ul class='collapsible node-list' data-collapsible='accordion'>
 		
 				<li class='node level-1  fail' status='fail' test-id='2'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Scenario: For the current day</div>						
-						<span class='node-time'>Apr 1, 2018 10:01:36 PM</span>
-						<span class='node-duration'>0h 0m 19s+644ms</span>
+						<div class='node-name'>Scenario: For the current day, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:01:43 PM</span>
+						<span class='node-duration'>0h 0m 17s+413ms</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
 				<li class='node level-2 leaf pass' status='pass' test-id='3'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
-						<span class='node-time'>Apr 1, 2018 10:01:40 PM</span>
-						<span class='node-duration'>0h 0m 1s+552ms</span>
+						<span class='node-time'>Apr 1, 2018 11:01:48 PM</span>
+						<span class='node-duration'>0h 0m 0s+851ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -198,7 +208,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:01:41 PM</td>
+													<td class='timestamp'>11:01:48 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -209,8 +219,8 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='4'>
 					<div class='collapsible-header'>
 						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
-						<span class='node-time'>Apr 1, 2018 10:01:41 PM</span>
-						<span class='node-duration'>0h 0m 11s+159ms</span>
+						<span class='node-time'>Apr 1, 2018 11:01:48 PM</span>
+						<span class='node-duration'>0h 0m 10s+338ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -226,7 +236,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:01:53 PM</td>
+													<td class='timestamp'>11:01:59 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -237,8 +247,8 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='5'>
 					<div class='collapsible-header'>
 						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
-						<span class='node-time'>Apr 1, 2018 10:01:53 PM</span>
-						<span class='node-duration'>0h 0m 2s+71ms</span>
+						<span class='node-time'>Apr 1, 2018 11:01:59 PM</span>
+						<span class='node-duration'>0h 0m 2s+37ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -254,7 +264,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:01:55 PM</td>
+													<td class='timestamp'>11:02:01 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -265,8 +275,8 @@
 				<li class='node level-2 leaf fail' status='fail' test-id='6'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Then I will compare the temp for the current day to assure its within the desired range of twenty degrees between the min and max temp</div>						
-						<span class='node-time'>Apr 1, 2018 10:01:55 PM</span>
-						<span class='node-duration'>0h 0m 0s+590ms</span>
+						<span class='node-time'>Apr 1, 2018 11:02:01 PM</span>
+						<span class='node-duration'>0h 0m 0s+132ms</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 						<div class='collapsible-body'>
@@ -282,12 +292,12 @@
 										<tbody>
 												<tr class='log' status='fail'>
 													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-													<td class='timestamp'>10:01:55 PM</td>
+													<td class='timestamp'>11:02:01 PM</td>
 													<td class='step-details'><pre>java.lang.NumberFormatException: For input string: "--34"
 	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
 	at java.lang.Integer.parseInt(Integer.java:580)
 	at java.lang.Integer.parseInt(Integer.java:615)
-	at StepFiles.StepDefs10DayForecast.iWillCompareTheTempForTheCurrentDayToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(StepDefs10DayForecast.java:102)
+	at StepFiles.StepDefs10DayForecast.iWillCompareTheTempForTheCurrentDayToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(StepDefs10DayForecast.java:103)
 	at ✽.Then I will compare the temp for the current day to assure its within the desired range of twenty degrees between the min and max temp(10DayForecast.feature:10)
 </pre></td>
 												</tr>
@@ -300,17 +310,17 @@
 				</li>
 				<li class='node level-1  pass' status='pass' test-id='7'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Scenario: For day 2</div>						
-						<span class='node-time'>Apr 1, 2018 10:02:02 PM</span>
-						<span class='node-duration'>0h 0m 17s+223ms</span>
+						<div class='node-name'>Scenario: For day 2, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:02:07 PM</span>
+						<span class='node-duration'>0h 0m 19s+961ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
 				<li class='node level-2 leaf pass' status='pass' test-id='8'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
-						<span class='node-time'>Apr 1, 2018 10:02:05 PM</span>
-						<span class='node-duration'>0h 0m 0s+198ms</span>
+						<span class='node-time'>Apr 1, 2018 11:02:10 PM</span>
+						<span class='node-duration'>0h 0m 0s+709ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -326,7 +336,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:02:05 PM</td>
+													<td class='timestamp'>11:02:11 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -337,8 +347,8 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='9'>
 					<div class='collapsible-header'>
 						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
-						<span class='node-time'>Apr 1, 2018 10:02:05 PM</span>
-						<span class='node-duration'>0h 0m 11s+691ms</span>
+						<span class='node-time'>Apr 1, 2018 11:02:11 PM</span>
+						<span class='node-duration'>0h 0m 9s+971ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -354,7 +364,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:02:17 PM</td>
+													<td class='timestamp'>11:02:21 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -365,8 +375,8 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='10'>
 					<div class='collapsible-header'>
 						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
-						<span class='node-time'>Apr 1, 2018 10:02:17 PM</span>
-						<span class='node-duration'>0h 0m 2s+133ms</span>
+						<span class='node-time'>Apr 1, 2018 11:02:21 PM</span>
+						<span class='node-duration'>0h 0m 2s+29ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -382,7 +392,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:02:19 PM</td>
+													<td class='timestamp'>11:02:23 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -393,8 +403,8 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='11'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Then I will compare the temp for day two to assure its within the desired range of twenty degrees between the min and max temp</div>						
-						<span class='node-time'>Apr 1, 2018 10:02:19 PM</span>
-						<span class='node-duration'>0h 0m 0s+182ms</span>
+						<span class='node-time'>Apr 1, 2018 11:02:23 PM</span>
+						<span class='node-duration'>0h 0m 3s+866ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -410,7 +420,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:02:19 PM</td>
+													<td class='timestamp'>11:02:27 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -420,19 +430,19 @@
 				</li>
 						</ul>
 				</li>
-				<li class='node level-1  fail' status='fail' test-id='12'>
+				<li class='node level-1  pass' status='pass' test-id='12'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Scenario: For day 3</div>						
-						<span class='node-time'>Apr 1, 2018 10:02:24 PM</span>
-						<span class='node-duration'>0h 0m 24s+109ms</span>
-						<span class='test-status right fail'>fail</span>
+						<div class='node-name'>Scenario: For day 3, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:02:32 PM</span>
+						<span class='node-duration'>0h 0m 22s+863ms</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
 				<li class='node level-2 leaf pass' status='pass' test-id='13'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
-						<span class='node-time'>Apr 1, 2018 10:02:28 PM</span>
-						<span class='node-duration'>0h 0m 0s+637ms</span>
+						<span class='node-time'>Apr 1, 2018 11:02:38 PM</span>
+						<span class='node-duration'>0h 0m 0s+139ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -448,7 +458,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:02:28 PM</td>
+													<td class='timestamp'>11:02:38 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -456,12 +466,12 @@
 								</div>
 						</div>
 				</li>
-				<li class='node level-2 leaf fail' status='fail' test-id='14'>
+				<li class='node level-2 leaf pass' status='pass' test-id='14'>
 					<div class='collapsible-header'>
 						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
-						<span class='node-time'>Apr 1, 2018 10:02:28 PM</span>
-						<span class='node-duration'>0h 0m 20s+251ms</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='node-time'>Apr 1, 2018 11:02:38 PM</span>
+						<span class='node-duration'>0h 0m 12s+551ms</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -474,32 +484,22 @@
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='fail'>
-													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-													<td class='timestamp'>10:02:48 PM</td>
-													<td class='step-details'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='APP']/div/div[6]/div[2]/div/div/div[1]/div[1]/div/div[3] (tried for 20 second(s) with 500 MILLISECONDS interval)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'Williams-MacBook-Pro.local', ip: 'fe80:0:0:0:c37:971f:e1e9:c242%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.3', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.37.544337 (8c0344a12e552148c185f7d5117db1f28d6c9e85), userDataDir=/var/folders/3s/skfr_gh54pg6_7ymsj2g39gr0000gn/T/.org.chromium.Chromium.cby2Ai}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c308362e6f69aeff99747479e1af0503
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at StepFiles.StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast(StepDefs10DayForecast.java:67)
-	at ✽.When I am on the main page I will click on the ten day forecast(10DayForecast.feature:18)
-</pre></td>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:02:51 PM</td>
+													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
 								</div>
 						</div>
 				</li>
-				<li class='node level-2 leaf skip' status='skip' test-id='15'>
+				<li class='node level-2 leaf pass' status='pass' test-id='15'>
 					<div class='collapsible-header'>
 						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
-						<span class='node-time'>Apr 1, 2018 10:02:48 PM</span>
-						<span class='node-duration'>0h 0m 0s+1ms</span>
-						<span class='test-status right skip'>skip</span>
+						<span class='node-time'>Apr 1, 2018 11:02:51 PM</span>
+						<span class='node-duration'>0h 0m 2s+44ms</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -512,22 +512,22 @@ Session ID: c308362e6f69aeff99747479e1af0503
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='skip'>
-													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-													<td class='timestamp'>10:02:48 PM</td>
-													<td class='step-details'>skipped</td>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:02:53 PM</td>
+													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
 								</div>
 						</div>
 				</li>
-				<li class='node level-2 leaf skip' status='skip' test-id='16'>
+				<li class='node level-2 leaf pass' status='pass' test-id='16'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Then I will compare the temp for day three to assure its within the desired range of twenty degrees between the min and max temp</div>						
-						<span class='node-time'>Apr 1, 2018 10:02:48 PM</span>
-						<span class='node-duration'>0h 0m 0s+1ms</span>
-						<span class='test-status right skip'>skip</span>
+						<span class='node-time'>Apr 1, 2018 11:02:53 PM</span>
+						<span class='node-duration'>0h 0m 2s+25ms</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -540,10 +540,10 @@ Session ID: c308362e6f69aeff99747479e1af0503
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='skip'>
-													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-													<td class='timestamp'>10:02:48 PM</td>
-													<td class='step-details'>skipped</td>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:02:55 PM</td>
+													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
@@ -554,17 +554,17 @@ Session ID: c308362e6f69aeff99747479e1af0503
 				</li>
 				<li class='node level-1  fail' status='fail' test-id='17'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Scenario: For day 4</div>						
-						<span class='node-time'>Apr 1, 2018 10:02:55 PM</span>
-						<span class='node-duration'>0h 0m 15s+832ms</span>
+						<div class='node-name'>Scenario: For day 4, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:03:00 PM</span>
+						<span class='node-duration'>0h 0m 17s+862ms</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
 				<li class='node level-2 leaf pass' status='pass' test-id='18'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
-						<span class='node-time'>Apr 1, 2018 10:02:58 PM</span>
-						<span class='node-duration'>0h 0m 0s+174ms</span>
+						<span class='node-time'>Apr 1, 2018 11:03:03 PM</span>
+						<span class='node-duration'>0h 0m 0s+180ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -580,7 +580,7 @@ Session ID: c308362e6f69aeff99747479e1af0503
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:02:58 PM</td>
+													<td class='timestamp'>11:03:04 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -591,8 +591,8 @@ Session ID: c308362e6f69aeff99747479e1af0503
 				<li class='node level-2 leaf pass' status='pass' test-id='19'>
 					<div class='collapsible-header'>
 						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
-						<span class='node-time'>Apr 1, 2018 10:02:58 PM</span>
-						<span class='node-duration'>0h 0m 9s+913ms</span>
+						<span class='node-time'>Apr 1, 2018 11:03:04 PM</span>
+						<span class='node-duration'>0h 0m 11s+441ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -608,7 +608,7 @@ Session ID: c308362e6f69aeff99747479e1af0503
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:03:08 PM</td>
+													<td class='timestamp'>11:03:15 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -619,8 +619,8 @@ Session ID: c308362e6f69aeff99747479e1af0503
 				<li class='node level-2 leaf pass' status='pass' test-id='20'>
 					<div class='collapsible-header'>
 						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
-						<span class='node-time'>Apr 1, 2018 10:03:08 PM</span>
-						<span class='node-duration'>0h 0m 2s+372ms</span>
+						<span class='node-time'>Apr 1, 2018 11:03:15 PM</span>
+						<span class='node-duration'>0h 0m 2s+758ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -636,7 +636,7 @@ Session ID: c308362e6f69aeff99747479e1af0503
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:03:11 PM</td>
+													<td class='timestamp'>11:03:18 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -647,8 +647,8 @@ Session ID: c308362e6f69aeff99747479e1af0503
 				<li class='node level-2 leaf fail' status='fail' test-id='21'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Then I will compare the temp for day four to assure its within the desired range of twenty degrees between the min and max temp</div>						
-						<span class='node-time'>Apr 1, 2018 10:03:11 PM</span>
-						<span class='node-duration'>0h 0m 0s+399ms</span>
+						<span class='node-time'>Apr 1, 2018 11:03:18 PM</span>
+						<span class='node-duration'>0h 0m 0s+286ms</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 						<div class='collapsible-body'>
@@ -664,13 +664,13 @@ Session ID: c308362e6f69aeff99747479e1af0503
 										<tbody>
 												<tr class='log' status='fail'>
 													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-													<td class='timestamp'>10:03:11 PM</td>
+													<td class='timestamp'>11:03:18 PM</td>
 													<td class='step-details'><textarea>java.lang.AssertionError: 
 Expected: a value less than or equal to <20>
      but: <31> was greater than <20>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at StepFiles.StepDefs10DayForecast.iWillCompareTheTempForDayFourToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(StepDefs10DayForecast.java:142)
+	at StepFiles.StepDefs10DayForecast.iWillCompareTheTempForDayFourToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(StepDefs10DayForecast.java:143)
 	at ✽.Then I will compare the temp for day four to assure its within the desired range of twenty degrees between the min and max temp(10DayForecast.feature:25)
 </textarea></td>
 												</tr>
@@ -683,17 +683,17 @@ Expected: a value less than or equal to <20>
 				</li>
 				<li class='node level-1  pass' status='pass' test-id='22'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Scenario: For day 5</div>						
-						<span class='node-time'>Apr 1, 2018 10:03:17 PM</span>
-						<span class='node-duration'>0h 0m 22s+216ms</span>
+						<div class='node-name'>Scenario: For day 5, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:03:24 PM</span>
+						<span class='node-duration'>0h 0m 17s+271ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
 				<li class='node level-2 leaf pass' status='pass' test-id='23'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
-						<span class='node-time'>Apr 1, 2018 10:03:20 PM</span>
-						<span class='node-duration'>0h 0m 0s+686ms</span>
+						<span class='node-time'>Apr 1, 2018 11:03:27 PM</span>
+						<span class='node-duration'>0h 0m 0s+189ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -709,7 +709,7 @@ Expected: a value less than or equal to <20>
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:03:21 PM</td>
+													<td class='timestamp'>11:03:28 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -720,8 +720,8 @@ Expected: a value less than or equal to <20>
 				<li class='node level-2 leaf pass' status='pass' test-id='24'>
 					<div class='collapsible-header'>
 						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
-						<span class='node-time'>Apr 1, 2018 10:03:21 PM</span>
-						<span class='node-duration'>0h 0m 15s+532ms</span>
+						<span class='node-time'>Apr 1, 2018 11:03:28 PM</span>
+						<span class='node-duration'>0h 0m 10s+942ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -737,7 +737,7 @@ Expected: a value less than or equal to <20>
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:03:36 PM</td>
+													<td class='timestamp'>11:03:39 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -748,8 +748,8 @@ Expected: a value less than or equal to <20>
 				<li class='node level-2 leaf pass' status='pass' test-id='25'>
 					<div class='collapsible-header'>
 						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
-						<span class='node-time'>Apr 1, 2018 10:03:36 PM</span>
-						<span class='node-duration'>0h 0m 2s+268ms</span>
+						<span class='node-time'>Apr 1, 2018 11:03:39 PM</span>
+						<span class='node-duration'>0h 0m 2s+351ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -765,7 +765,7 @@ Expected: a value less than or equal to <20>
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:03:39 PM</td>
+													<td class='timestamp'>11:03:41 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -776,8 +776,8 @@ Expected: a value less than or equal to <20>
 				<li class='node level-2 leaf pass' status='pass' test-id='26'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Then I will compare the temp for day five to assure its within the desired range of twenty degrees between the min and max temp</div>						
-						<span class='node-time'>Apr 1, 2018 10:03:39 PM</span>
-						<span class='node-duration'>0h 0m 0s+556ms</span>
+						<span class='node-time'>Apr 1, 2018 11:03:41 PM</span>
+						<span class='node-duration'>0h 0m 0s+704ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -793,7 +793,7 @@ Expected: a value less than or equal to <20>
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:03:39 PM</td>
+													<td class='timestamp'>11:03:42 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -805,17 +805,17 @@ Expected: a value less than or equal to <20>
 				</li>
 				<li class='node level-1  pass' status='pass' test-id='27'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Scenario: For day 6</div>						
-						<span class='node-time'>Apr 1, 2018 10:03:44 PM</span>
-						<span class='node-duration'>0h 0m 15s+386ms</span>
+						<div class='node-name'>Scenario: For day 6, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:03:47 PM</span>
+						<span class='node-duration'>0h 0m 21s+119ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
 				<li class='node level-2 leaf pass' status='pass' test-id='28'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
-						<span class='node-time'>Apr 1, 2018 10:03:47 PM</span>
-						<span class='node-duration'>0h 0m 0s+192ms</span>
+						<span class='node-time'>Apr 1, 2018 11:03:50 PM</span>
+						<span class='node-duration'>0h 0m 0s+730ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -831,7 +831,7 @@ Expected: a value less than or equal to <20>
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:03:47 PM</td>
+													<td class='timestamp'>11:03:51 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -842,8 +842,8 @@ Expected: a value less than or equal to <20>
 				<li class='node level-2 leaf pass' status='pass' test-id='29'>
 					<div class='collapsible-header'>
 						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
-						<span class='node-time'>Apr 1, 2018 10:03:47 PM</span>
-						<span class='node-duration'>0h 0m 9s+763ms</span>
+						<span class='node-time'>Apr 1, 2018 11:03:51 PM</span>
+						<span class='node-duration'>0h 0m 14s+881ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -859,7 +859,7 @@ Expected: a value less than or equal to <20>
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:03:57 PM</td>
+													<td class='timestamp'>11:04:06 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -870,8 +870,8 @@ Expected: a value less than or equal to <20>
 				<li class='node level-2 leaf pass' status='pass' test-id='30'>
 					<div class='collapsible-header'>
 						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
-						<span class='node-time'>Apr 1, 2018 10:03:57 PM</span>
-						<span class='node-duration'>0h 0m 2s+462ms</span>
+						<span class='node-time'>Apr 1, 2018 11:04:06 PM</span>
+						<span class='node-duration'>0h 0m 2s+33ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -887,7 +887,7 @@ Expected: a value less than or equal to <20>
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:04:00 PM</td>
+													<td class='timestamp'>11:04:08 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -898,8 +898,8 @@ Expected: a value less than or equal to <20>
 				<li class='node level-2 leaf pass' status='pass' test-id='31'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Then I will compare the temp for day six to assure its within the desired range of twenty degrees between the min and max temp</div>						
-						<span class='node-time'>Apr 1, 2018 10:04:00 PM</span>
-						<span class='node-duration'>0h 0m 0s+157ms</span>
+						<span class='node-time'>Apr 1, 2018 11:04:08 PM</span>
+						<span class='node-duration'>0h 0m 0s+227ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -915,7 +915,7 @@ Expected: a value less than or equal to <20>
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:04:00 PM</td>
+													<td class='timestamp'>11:04:08 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -927,17 +927,17 @@ Expected: a value less than or equal to <20>
 				</li>
 				<li class='node level-1  pass' status='pass' test-id='32'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Scenario: For day 7</div>						
-						<span class='node-time'>Apr 1, 2018 10:04:05 PM</span>
-						<span class='node-duration'>0h 0m 15s+896ms</span>
+						<div class='node-name'>Scenario: For day 7, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:04:13 PM</span>
+						<span class='node-duration'>0h 0m 17s+57ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
 				<li class='node level-2 leaf pass' status='pass' test-id='33'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
-						<span class='node-time'>Apr 1, 2018 10:04:08 PM</span>
-						<span class='node-duration'>0h 0m 0s+283ms</span>
+						<span class='node-time'>Apr 1, 2018 11:04:16 PM</span>
+						<span class='node-duration'>0h 0m 0s+241ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -953,7 +953,7 @@ Expected: a value less than or equal to <20>
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:04:08 PM</td>
+													<td class='timestamp'>11:04:16 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -964,8 +964,8 @@ Expected: a value less than or equal to <20>
 				<li class='node level-2 leaf pass' status='pass' test-id='34'>
 					<div class='collapsible-header'>
 						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
-						<span class='node-time'>Apr 1, 2018 10:04:08 PM</span>
-						<span class='node-duration'>0h 0m 10s+30ms</span>
+						<span class='node-time'>Apr 1, 2018 11:04:16 PM</span>
+						<span class='node-duration'>0h 0m 10s+659ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -981,7 +981,7 @@ Expected: a value less than or equal to <20>
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:04:19 PM</td>
+													<td class='timestamp'>11:04:27 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -992,8 +992,8 @@ Expected: a value less than or equal to <20>
 				<li class='node level-2 leaf pass' status='pass' test-id='35'>
 					<div class='collapsible-header'>
 						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
-						<span class='node-time'>Apr 1, 2018 10:04:19 PM</span>
-						<span class='node-duration'>0h 0m 2s+305ms</span>
+						<span class='node-time'>Apr 1, 2018 11:04:27 PM</span>
+						<span class='node-duration'>0h 0m 2s+671ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -1009,7 +1009,7 @@ Expected: a value less than or equal to <20>
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:04:21 PM</td>
+													<td class='timestamp'>11:04:30 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -1020,8 +1020,8 @@ Expected: a value less than or equal to <20>
 				<li class='node level-2 leaf pass' status='pass' test-id='36'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Then I will compare the temp for day seven to assure its within the desired range of twenty degrees between the min and max temp</div>						
-						<span class='node-time'>Apr 1, 2018 10:04:21 PM</span>
-						<span class='node-duration'>0h 0m 0s+256ms</span>
+						<span class='node-time'>Apr 1, 2018 11:04:30 PM</span>
+						<span class='node-duration'>0h 0m 0s+420ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -1037,7 +1037,7 @@ Expected: a value less than or equal to <20>
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:04:21 PM</td>
+													<td class='timestamp'>11:04:30 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -1047,19 +1047,19 @@ Expected: a value less than or equal to <20>
 				</li>
 						</ul>
 				</li>
-				<li class='node level-1  fail' status='fail' test-id='37'>
+				<li class='node level-1  pass' status='pass' test-id='37'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Scenario: For day 8</div>						
-						<span class='node-time'>Apr 1, 2018 10:04:26 PM</span>
-						<span class='node-duration'>0h 0m 23s+469ms</span>
-						<span class='test-status right fail'>fail</span>
+						<div class='node-name'>Scenario: For day 8, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:04:35 PM</span>
+						<span class='node-duration'>0h 0m 17s+35ms</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
 				<li class='node level-2 leaf pass' status='pass' test-id='38'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
-						<span class='node-time'>Apr 1, 2018 10:04:29 PM</span>
-						<span class='node-duration'>0h 0m 0s+100ms</span>
+						<span class='node-time'>Apr 1, 2018 11:04:39 PM</span>
+						<span class='node-duration'>0h 0m 0s+303ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -1075,7 +1075,7 @@ Expected: a value less than or equal to <20>
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:04:30 PM</td>
+													<td class='timestamp'>11:04:39 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -1083,12 +1083,12 @@ Expected: a value less than or equal to <20>
 								</div>
 						</div>
 				</li>
-				<li class='node level-2 leaf fail' status='fail' test-id='39'>
+				<li class='node level-2 leaf pass' status='pass' test-id='39'>
 					<div class='collapsible-header'>
 						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
-						<span class='node-time'>Apr 1, 2018 10:04:30 PM</span>
-						<span class='node-duration'>0h 0m 20s+156ms</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='node-time'>Apr 1, 2018 11:04:39 PM</span>
+						<span class='node-duration'>0h 0m 10s+806ms</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -1101,32 +1101,22 @@ Expected: a value less than or equal to <20>
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='fail'>
-													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-													<td class='timestamp'>10:04:50 PM</td>
-													<td class='step-details'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='APP']/div/div[6]/div[2]/div/div/div[1]/div[1]/div/div[3] (tried for 20 second(s) with 500 MILLISECONDS interval)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'Williams-MacBook-Pro.local', ip: 'fe80:0:0:0:c37:971f:e1e9:c242%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.3', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.37.544337 (8c0344a12e552148c185f7d5117db1f28d6c9e85), userDataDir=/var/folders/3s/skfr_gh54pg6_7ymsj2g39gr0000gn/T/.org.chromium.Chromium.8CLDXE}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at StepFiles.StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast(StepDefs10DayForecast.java:67)
-	at ✽.When I am on the main page I will click on the ten day forecast(10DayForecast.feature:43)
-</pre></td>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:04:50 PM</td>
+													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
 								</div>
 						</div>
 				</li>
-				<li class='node level-2 leaf skip' status='skip' test-id='40'>
+				<li class='node level-2 leaf pass' status='pass' test-id='40'>
 					<div class='collapsible-header'>
 						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
-						<span class='node-time'>Apr 1, 2018 10:04:50 PM</span>
-						<span class='node-duration'>0h 0m 0s+0ms</span>
-						<span class='test-status right skip'>skip</span>
+						<span class='node-time'>Apr 1, 2018 11:04:50 PM</span>
+						<span class='node-duration'>0h 0m 2s+332ms</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -1139,22 +1129,22 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='skip'>
-													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-													<td class='timestamp'>10:04:50 PM</td>
-													<td class='step-details'>skipped</td>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:04:52 PM</td>
+													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
 								</div>
 						</div>
 				</li>
-				<li class='node level-2 leaf skip' status='skip' test-id='41'>
+				<li class='node level-2 leaf pass' status='pass' test-id='41'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Then I will compare the temp for day eight to assure its within the desired range of twenty degrees between the min and max temp</div>						
-						<span class='node-time'>Apr 1, 2018 10:04:50 PM</span>
-						<span class='node-duration'>0h 0m 0s+1ms</span>
-						<span class='test-status right skip'>skip</span>
+						<span class='node-time'>Apr 1, 2018 11:04:52 PM</span>
+						<span class='node-duration'>0h 0m 0s+181ms</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -1167,10 +1157,10 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='skip'>
-													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-													<td class='timestamp'>10:04:50 PM</td>
-													<td class='step-details'>skipped</td>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:04:52 PM</td>
+													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
 									</table>
@@ -1181,17 +1171,17 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 				</li>
 				<li class='node level-1  pass' status='pass' test-id='42'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Scenario: For day 9</div>						
-						<span class='node-time'>Apr 1, 2018 10:04:57 PM</span>
-						<span class='node-duration'>0h 0m 17s+356ms</span>
+						<div class='node-name'>Scenario: For day 9, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:04:58 PM</span>
+						<span class='node-duration'>0h 0m 22s+142ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
 				<li class='node level-2 leaf pass' status='pass' test-id='43'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
-						<span class='node-time'>Apr 1, 2018 10:05:00 PM</span>
-						<span class='node-duration'>0h 0m 0s+479ms</span>
+						<span class='node-time'>Apr 1, 2018 11:05:01 PM</span>
+						<span class='node-duration'>0h 0m 0s+580ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -1207,7 +1197,7 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:05:00 PM</td>
+													<td class='timestamp'>11:05:02 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -1218,8 +1208,8 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 				<li class='node level-2 leaf pass' status='pass' test-id='44'>
 					<div class='collapsible-header'>
 						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
-						<span class='node-time'>Apr 1, 2018 10:05:00 PM</span>
-						<span class='node-duration'>0h 0m 10s+575ms</span>
+						<span class='node-time'>Apr 1, 2018 11:05:02 PM</span>
+						<span class='node-duration'>0h 0m 15s+842ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -1235,7 +1225,7 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:05:11 PM</td>
+													<td class='timestamp'>11:05:17 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -1246,8 +1236,8 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 				<li class='node level-2 leaf pass' status='pass' test-id='45'>
 					<div class='collapsible-header'>
 						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
-						<span class='node-time'>Apr 1, 2018 10:05:11 PM</span>
-						<span class='node-duration'>0h 0m 2s+640ms</span>
+						<span class='node-time'>Apr 1, 2018 11:05:17 PM</span>
+						<span class='node-duration'>0h 0m 2s+97ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -1263,7 +1253,7 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:05:14 PM</td>
+													<td class='timestamp'>11:05:19 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -1274,8 +1264,8 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 				<li class='node level-2 leaf pass' status='pass' test-id='46'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Then I will compare the temp for day nine to assure its within the desired range of twenty degrees between the min and max temp</div>						
-						<span class='node-time'>Apr 1, 2018 10:05:14 PM</span>
-						<span class='node-duration'>0h 0m 0s+294ms</span>
+						<span class='node-time'>Apr 1, 2018 11:05:19 PM</span>
+						<span class='node-duration'>0h 0m 0s+207ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -1291,7 +1281,7 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:05:14 PM</td>
+													<td class='timestamp'>11:05:20 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -1303,17 +1293,17 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 				</li>
 				<li class='node level-1  pass' status='pass' test-id='47'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Scenario: For day 10</div>						
-						<span class='node-time'>Apr 1, 2018 10:05:19 PM</span>
-						<span class='node-duration'>0h 0m 16s+374ms</span>
+						<div class='node-name'>Scenario: For day 10, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:05:25 PM</span>
+						<span class='node-duration'>0h 0m 17s+374ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
 				<li class='node level-2 leaf pass' status='pass' test-id='48'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
-						<span class='node-time'>Apr 1, 2018 10:05:22 PM</span>
-						<span class='node-duration'>0h 0m 0s+82ms</span>
+						<span class='node-time'>Apr 1, 2018 11:05:28 PM</span>
+						<span class='node-duration'>0h 0m 0s+107ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -1329,7 +1319,7 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:05:23 PM</td>
+													<td class='timestamp'>11:05:28 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -1340,8 +1330,8 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 				<li class='node level-2 leaf pass' status='pass' test-id='49'>
 					<div class='collapsible-header'>
 						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
-						<span class='node-time'>Apr 1, 2018 10:05:23 PM</span>
-						<span class='node-duration'>0h 0m 10s+58ms</span>
+						<span class='node-time'>Apr 1, 2018 11:05:28 PM</span>
+						<span class='node-duration'>0h 0m 11s+91ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -1357,7 +1347,7 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:05:33 PM</td>
+													<td class='timestamp'>11:05:39 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -1368,8 +1358,8 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 				<li class='node level-2 leaf pass' status='pass' test-id='50'>
 					<div class='collapsible-header'>
 						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
-						<span class='node-time'>Apr 1, 2018 10:05:33 PM</span>
-						<span class='node-duration'>0h 0m 2s+317ms</span>
+						<span class='node-time'>Apr 1, 2018 11:05:39 PM</span>
+						<span class='node-duration'>0h 0m 2s+597ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -1385,7 +1375,7 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:05:35 PM</td>
+													<td class='timestamp'>11:05:42 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -1396,8 +1386,8 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 				<li class='node level-2 leaf pass' status='pass' test-id='51'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Then I will compare the temp for day ten to assure its within the desired range of twenty degrees between the min and max temp</div>						
-						<span class='node-time'>Apr 1, 2018 10:05:35 PM</span>
-						<span class='node-duration'>0h 0m 0s+577ms</span>
+						<span class='node-time'>Apr 1, 2018 11:05:42 PM</span>
+						<span class='node-duration'>0h 0m 0s+608ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -1413,7 +1403,617 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:05:35 PM</td>
+													<td class='timestamp'>11:05:42 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-1  pass' status='pass' test-id='52'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Scenario: For day 11, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:05:48 PM</span>
+						<span class='node-duration'>0h 0m 16s+728ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='53'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
+						<span class='node-time'>Apr 1, 2018 11:05:51 PM</span>
+						<span class='node-duration'>0h 0m 0s+148ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:05:51 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='54'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
+						<span class='node-time'>Apr 1, 2018 11:05:51 PM</span>
+						<span class='node-duration'>0h 0m 9s+839ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:06:01 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='55'>
+					<div class='collapsible-header'>
+						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:01 PM</span>
+						<span class='node-duration'>0h 0m 3s+39ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:06:04 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='56'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then I will compare the temp for day eleven to assure its within the desired range of twenty degrees between the min and max temp</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:04 PM</span>
+						<span class='node-duration'>0h 0m 0s+653ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:06:04 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-1  pass' status='pass' test-id='57'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Scenario: For day 12, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:10 PM</span>
+						<span class='node-duration'>0h 0m 17s+436ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='58'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:14 PM</span>
+						<span class='node-duration'>0h 0m 0s+188ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:06:14 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='59'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:14 PM</span>
+						<span class='node-duration'>0h 0m 10s+212ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:06:24 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='60'>
+					<div class='collapsible-header'>
+						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:24 PM</span>
+						<span class='node-duration'>0h 0m 3s+152ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:06:27 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='61'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then I will compare the temp for day twelve to assure its within the desired range of twenty degrees between the min and max temp</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:27 PM</span>
+						<span class='node-duration'>0h 0m 0s+482ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:06:28 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-1  pass' status='pass' test-id='62'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Scenario: For day 13, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:33 PM</span>
+						<span class='node-duration'>0h 0m 15s+410ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='63'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:36 PM</span>
+						<span class='node-duration'>0h 0m 0s+108ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:06:36 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='64'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:36 PM</span>
+						<span class='node-duration'>0h 0m 9s+428ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:06:46 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='65'>
+					<div class='collapsible-header'>
+						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:46 PM</span>
+						<span class='node-duration'>0h 0m 2s+73ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:06:48 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='66'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then I will compare the temp for day thirteen to assure its within the desired range of twenty degrees between the min and max temp</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:48 PM</span>
+						<span class='node-duration'>0h 0m 0s+413ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:06:48 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-1  pass' status='pass' test-id='67'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Scenario: For day 14, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:54 PM</span>
+						<span class='node-duration'>0h 0m 16s+689ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='68'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:57 PM</span>
+						<span class='node-duration'>0h 0m 0s+226ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:06:57 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='69'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
+						<span class='node-time'>Apr 1, 2018 11:06:57 PM</span>
+						<span class='node-duration'>0h 0m 10s+930ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:07:08 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='70'>
+					<div class='collapsible-header'>
+						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
+						<span class='node-time'>Apr 1, 2018 11:07:08 PM</span>
+						<span class='node-duration'>0h 0m 2s+221ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:07:10 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='71'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then I will compare the temp for day fourteen to assure its within the desired range of twenty degrees between the min and max temp</div>						
+						<span class='node-time'>Apr 1, 2018 11:07:10 PM</span>
+						<span class='node-duration'>0h 0m 0s+217ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:07:10 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-1  pass' status='pass' test-id='72'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Scenario: For day 15, verify temp is within 20 degrees of the min and max temps</div>						
+						<span class='node-time'>Apr 1, 2018 11:07:16 PM</span>
+						<span class='node-duration'>0h 0m 23s+386ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='73'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Given Chrome browser launches, and I land on the weatherdotcom main page</div>						
+						<span class='node-time'>Apr 1, 2018 11:07:19 PM</span>
+						<span class='node-duration'>0h 0m 0s+797ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:07:20 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='74'>
+					<div class='collapsible-header'>
+						<div class='node-name'>When I am on the main page I will click on the ten day forecast</div>						
+						<span class='node-time'>Apr 1, 2018 11:07:20 PM</span>
+						<span class='node-duration'>0h 0m 12s+368ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:07:32 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='75'>
+					<div class='collapsible-header'>
+						<div class='node-name'>And I will confirm I land on the ten day forecast for the local area</div>						
+						<span class='node-time'>Apr 1, 2018 11:07:32 PM</span>
+						<span class='node-duration'>0h 0m 2s+28ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:07:34 PM</td>
+													<td class='step-details'>passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='76'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then I will compare the temp for day fifteen to assure its within the desired range of twenty degrees between the min and max temp</div>						
+						<span class='node-time'>Apr 1, 2018 11:07:34 PM</span>
+						<span class='node-duration'>0h 0m 4s+996ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>11:07:39 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -1451,6 +2051,107 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
 
 </div>
 <!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@next7</span>
+						<span class='category-status right'>
+							<span class='label pass'>5</span>
+							<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 5</span>
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 1, 2018 11:01:43 PM</td>
+										<td class='linked' test-id='2'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance.Scenario: For the current day, verify temp is within 20 degrees of the min and max temps</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2018 11:02:07 PM</td>
+										<td class='linked' test-id='7'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance.Scenario: For day 2, verify temp is within 20 degrees of the min and max temps</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2018 11:02:32 PM</td>
+										<td class='linked' test-id='12'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance.Scenario: For day 3, verify temp is within 20 degrees of the min and max temps</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2018 11:03:00 PM</td>
+										<td class='linked' test-id='17'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance.Scenario: For day 4, verify temp is within 20 degrees of the min and max temps</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2018 11:03:24 PM</td>
+										<td class='linked' test-id='22'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance.Scenario: For day 5, verify temp is within 20 degrees of the min and max temps</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2018 11:03:47 PM</td>
+										<td class='linked' test-id='27'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance.Scenario: For day 6, verify temp is within 20 degrees of the min and max temps</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 1, 2018 11:04:13 PM</td>
+										<td class='linked' test-id='32'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance.Scenario: For day 7, verify temp is within 20 degrees of the min and max temps</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
 <!-- category view -->
 <div id='exception-view' class='view hide'>
 
@@ -1494,65 +2195,14 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Apr 1, 2018 10:01:55 PM</td>
-                                                        <td class='linked' test-id='6'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance.Scenario: For the current day.Then I will compare the temp for the current day to assure its within the desired range of twenty degrees between the min and max temp</td>
+                                                        <td>Apr 1, 2018 11:02:01 PM</td>
+                                                        <td class='linked' test-id='6'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance.Scenario: For the current day, verify temp is within 20 degrees of the min and max temps.Then I will compare the temp for the current day to assure its within the desired range of twenty degrees between the min and max temp</td>
                                                         <td><pre><pre>java.lang.NumberFormatException: For input string: "--34"
 	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
 	at java.lang.Integer.parseInt(Integer.java:580)
 	at java.lang.Integer.parseInt(Integer.java:615)
-	at StepFiles.StepDefs10DayForecast.iWillCompareTheTempForTheCurrentDayToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(StepDefs10DayForecast.java:102)
+	at StepFiles.StepDefs10DayForecast.iWillCompareTheTempForTheCurrentDayToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(StepDefs10DayForecast.java:103)
 	at ✽.Then I will compare the temp for the current day to assure its within the desired range of twenty degrees between the min and max temp(10DayForecast.feature:10)
-</pre></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>org.openqa.selenium.TimeoutException</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>Apr 1, 2018 10:02:28 PM</td>
-                                                        <td class='linked' test-id='14'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance.Scenario: For day 3.When I am on the main page I will click on the ten day forecast</td>
-                                                        <td><pre><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='APP']/div/div[6]/div[2]/div/div/div[1]/div[1]/div/div[3] (tried for 20 second(s) with 500 MILLISECONDS interval)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'Williams-MacBook-Pro.local', ip: 'fe80:0:0:0:c37:971f:e1e9:c242%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.3', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.37.544337 (8c0344a12e552148c185f7d5117db1f28d6c9e85), userDataDir=/var/folders/3s/skfr_gh54pg6_7ymsj2g39gr0000gn/T/.org.chromium.Chromium.cby2Ai}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: c308362e6f69aeff99747479e1af0503
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at StepFiles.StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast(StepDefs10DayForecast.java:67)
-	at ✽.When I am on the main page I will click on the ten day forecast(10DayForecast.feature:18)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Apr 1, 2018 10:04:30 PM</td>
-                                                        <td class='linked' test-id='39'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance.Scenario: For day 8.When I am on the main page I will click on the ten day forecast</td>
-                                                        <td><pre><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='APP']/div/div[6]/div[2]/div/div/div[1]/div[1]/div/div[3] (tried for 20 second(s) with 500 MILLISECONDS interval)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'Williams-MacBook-Pro.local', ip: 'fe80:0:0:0:c37:971f:e1e9:c242%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.3', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.37.544337 (8c0344a12e552148c185f7d5117db1f28d6c9e85), userDataDir=/var/folders/3s/skfr_gh54pg6_7ymsj2g39gr0000gn/T/.org.chromium.Chromium.8CLDXE}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at StepFiles.StepDefs10DayForecast.iAmOnTheMainPageIWillClickOnTheTenDayForecast(StepDefs10DayForecast.java:67)
-	at ✽.When I am on the main page I will click on the ten day forecast(10DayForecast.feature:43)
 </pre></pre></td>
                                                     </tr>
                                         </tbody>
@@ -1577,14 +2227,14 @@ Session ID: e378075c5dd1d25bff5d579bb5ff5f1a
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Apr 1, 2018 10:03:11 PM</td>
-                                                        <td class='linked' test-id='21'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance.Scenario: For day 4.Then I will compare the temp for day four to assure its within the desired range of twenty degrees between the min and max temp</td>
+                                                        <td>Apr 1, 2018 11:03:18 PM</td>
+                                                        <td class='linked' test-id='21'>Using weather.com I want to use the 10 day forecast to compare the daily temp variance.Scenario: For day 4, verify temp is within 20 degrees of the min and max temps.Then I will compare the temp for day four to assure its within the desired range of twenty degrees between the min and max temp</td>
                                                         <td><pre><textarea>java.lang.AssertionError: 
 Expected: a value less than or equal to <20>
      but: <31> was greater than <20>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at StepFiles.StepDefs10DayForecast.iWillCompareTheTempForDayFourToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(StepDefs10DayForecast.java:142)
+	at StepFiles.StepDefs10DayForecast.iWillCompareTheTempForDayFourToAssureItsWithinTheDesiredRangeOfTwentyDegreesBetweenTheMinAndMaxTemp(StepDefs10DayForecast.java:143)
 	at ✽.Then I will compare the temp for day four to assure its within the desired range of twenty degrees between the min and max temp(10DayForecast.feature:25)
 </textarea></pre></td>
                                                     </tr>
@@ -1612,31 +2262,51 @@ Expected: a value less than or equal to <20>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>40</div>
+					<div class='panel-lead'>60</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>40</div>
+					<div class='panel-lead'>60</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 1, 2018 10:01:35 PM</div>
+					<div class='panel-lead'>Apr 1, 2018 11:01:43 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 1, 2018 10:05:41 PM</div>
+			 		<div class='panel-lead'>Apr 1, 2018 11:07:44 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>245,599ms</div>
+					<div class='panel-lead'>360,972ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>@next7</td>
+							<td>5</td>
+							<td>2</td>
+							<td>0</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 		</div>
@@ -1649,22 +2319,22 @@ Expected: a value less than or equal to <20>
 
 		<script>
 			var statusGroup = {
-				passParent: 32,
-				failParent: 4,
+				passParent: 58,
+				failParent: 2,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 4,
-				exceptionsParent: 8,
+				skipParent: 0,
+				exceptionsParent: 2,
 				
-				passChild: 32,
-				failChild: 4,
+				passChild: 58,
+				failChild: 2,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 4,
+				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 8,
+				exceptionsChild: 2,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

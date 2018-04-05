@@ -130,7 +130,7 @@ public class StepDefs10DayForecast {
     @And("^I will check day \"([^\"]*)\" and get the max and min temp to confirm its within the expected range$")
     public void iWillCheckDayAndGetTheMaxAndMinTempToConfirmItsWithinTheExpectedRange(String arg0) {
         this.getMaxAndMinTemp(arg0);
-        assertThat(var, lessThanOrEqualTo(20));
+        assertThat(var, lessThanOrEqualTo(10));
     }
 
     @Then("^I will get the same days data from the api node \"([^\"]*)\" response to compare that they match$")

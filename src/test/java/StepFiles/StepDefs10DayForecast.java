@@ -1,6 +1,7 @@
 package StepFiles;
 
 
+import cucumber.api.PendingException;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -13,6 +14,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -27,9 +29,11 @@ public class StepDefs10DayForecast {
     WebDriver driverchrome = null;
     List<Integer> maxTemp = null;
     List<Integer> minTemp = null;
+    List<Integer> humid = null;
     int max;
     int min;
     int var;
+    int locHumid;
     String state;
     String city;
 
@@ -39,6 +43,8 @@ public class StepDefs10DayForecast {
         response = given().get("http://api.wunderground.com/api/99a8db9a0f3c2e31/forecast10day/q/" + state + "/" + city + ".json");
         this.maxTemp = response.jsonPath().get("forecast.simpleforecast.forecastday.high.fahrenheit");
         this.minTemp = response.jsonPath().get("forecast.simpleforecast.forecastday.low.fahrenheit");
+        this.humid = response.jsonPath().get("forecast.simpleforecast.forecastday.avehumidity");
+
     }
 
     public void getMaxAndMinTemp(String arg0) {
@@ -50,6 +56,14 @@ public class StepDefs10DayForecast {
         this.min = Integer.parseInt(temps[1]);
         this.var = max - min;
 
+    }
+
+    public void getHumidity(String arg0) {
+        WebElement table = (new WebDriverWait(driverchrome, 25))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#twc-scrollabe > table")));
+        String humid = table.findElement(By.cssSelector("#twc-scrollabe > table > tbody > tr:nth-child(" + arg0 + ") > td.humidity")).getText();
+        String humidSplit[] = humid.split("\\%");
+        this.locHumid = Integer.parseInt(humidSplit[0]);
     }
 
     @Before
@@ -153,6 +167,28 @@ public class StepDefs10DayForecast {
             cce.printStackTrace();
 
         }
+    }
+
+    @And("^I will check day \"([^\"]*)\" and get the humidity for each day$")
+    public void iWillCheckDayAndGetTheHumidityForEachDay(String arg0) {
+        this.getHumidity(arg0);
+        Assert.assertNotNull(this.locHumid);
+    }
+
+    @Then("^I will get the same days data from the api node \"([^\"]*)\" response to compare that the humidity data matches$")
+    public void iWillGetTheSameDaysDataFromTheApiNodeResponseToCompareThatTheHumidityDataMatches(String arg0) {
+        this.getApiData(state, city);
+
+        try {
+            int index = Integer.valueOf(arg0);
+
+            int apiHumid = this.humid.get(index);
+            assertThat(apiHumid, equalTo(this.locHumid));
+        }catch (ClassCastException cce) {
+            cce.printStackTrace();
+
+        }
+
     }
 }
 

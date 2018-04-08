@@ -4,7 +4,6 @@ Feature: Using weather.com I want to use the 10 day forecast to compare the dail
   Background:
     Given Chrome browser launches, and I land on the weatherdotcom main page
 
-
   Scenario Outline: For the 10 day forecast, verify temp is within 10 degrees of the min and max temps each day and compare it to the api response
     When I am on the main page I will click on the ten day forecast
     And I will confirm I land on the ten day forecast for the local area

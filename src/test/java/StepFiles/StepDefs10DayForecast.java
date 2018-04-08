@@ -1,32 +1,33 @@
 package StepFiles;
 
-
-import cucumber.api.PendingException;
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import Resource.Driver;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.restassured.response.Response;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.number.OrderingComparison.lessThanOrEqualTo;
 
-public class StepDefs10DayForecast {
+public class StepDefs10DayForecast extends Driver{
 
-    WebDriver driverchrome = null;
+    private Driver driver;
+
+    public StepDefs10DayForecast (Driver driver) {
+        this.driver = driver;
+    }
+
+    private WebDriver driverchrome = null;
+
     List<Integer> maxTemp = null;
     List<Integer> minTemp = null;
     List<Integer> humid = null;
@@ -44,7 +45,6 @@ public class StepDefs10DayForecast {
         this.maxTemp = response.jsonPath().get("forecast.simpleforecast.forecastday.high.fahrenheit");
         this.minTemp = response.jsonPath().get("forecast.simpleforecast.forecastday.low.fahrenheit");
         this.humid = response.jsonPath().get("forecast.simpleforecast.forecastday.avehumidity");
-
     }
 
     public void getMaxAndMinTemp(String arg0) {
@@ -55,7 +55,6 @@ public class StepDefs10DayForecast {
         this.max = Integer.parseInt(temps[0]);
         this.min = Integer.parseInt(temps[1]);
         this.var = max - min;
-
     }
 
     public void getHumidity(String arg0) {
@@ -66,36 +65,9 @@ public class StepDefs10DayForecast {
         this.locHumid = Integer.parseInt(humidSplit[0]);
     }
 
-    @Before
-    public void prepTest() {
-        System.setProperty("webdriver.chrome.driver", "/Users/williambigno/projectJavaSeleniumCucumber/src/resources/chromedriver");
-        driverchrome = new ChromeDriver();
-        driverchrome.get("https://weather.com");
-        driverchrome.manage().window().maximize();
-        driverchrome.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
-    }
-
-    @After
-    public void testClean(Scenario scenario) throws InterruptedException {
-        if (scenario.isFailed()) {
-            try {
-                byte[] screenshot = ((TakesScreenshot) driverchrome).getScreenshotAs(OutputType.BYTES);
-                String testName = scenario.getName();
-                scenario.embed(screenshot, "image/png");
-                scenario.write(testName);
-            } catch (WebDriverException wde) {
-                System.err.println(wde.getMessage());
-            }
-        }
-        Thread.sleep(5000);
-
-        driverchrome.close();
-
-    }
-
     @Given("^Chrome browser launches, and I land on the weatherdotcom main page$")
     public void chromeBrowserLaunchesAndILandOnTheWeatherdotcomMainPage() {
+        driverchrome = driver.driverchrome;
         String actual = driverchrome.getTitle();
         String expected = "National and Local Weather Radar, Daily Forecast, Hurricane and information from The Weather Channel and weather.com";
         assertThat(actual, equalTo(expected));
@@ -138,7 +110,6 @@ public class StepDefs10DayForecast {
                 break;
             }
         }
-
     }
 
     @And("^I will check day \"([^\"]*)\" and get the max and min temp to confirm its within the expected range$")
@@ -154,12 +125,12 @@ public class StepDefs10DayForecast {
         try {
             int index = Integer.valueOf(arg0);
 
-            int apiMax = maxTemp.get(index);
+            int apiMax = maxTemp.indexOf(index);
             int webMax = this.max;
             assertThat(apiMax, equalTo(webMax));
 
 
-            int apiMin = minTemp.get(index);
+            int apiMin = minTemp.indexOf(index);
             int webMin = this.min;
             assertThat(apiMin, equalTo(webMin));
 
@@ -180,15 +151,14 @@ public class StepDefs10DayForecast {
         this.getApiData(state, city);
 
         try {
-            int index = Integer.valueOf(arg0);
+
+            int index = Integer.decode(arg0);
 
             int apiHumid = this.humid.get(index);
             assertThat(apiHumid, equalTo(this.locHumid));
         }catch (ClassCastException cce) {
             cce.printStackTrace();
-
         }
-
     }
 }
 
